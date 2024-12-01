@@ -4,8 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .image
+        {
+            height: 600px;
+            width: 100%;
+            position: relative;
+        }
+        img
+        {
+            height: 100%;
+            width: 100%;
+           
+        }
+        button
+        {
+            padding: 5px;
+            position: absolute;
+            left: 0;
+            top: 250px;
+            border-radius: 50px;
+            border: none;
+            /* color: white; */
+            /* background-color: transparent; */
+            box-shadow: 3px 3px 7px black;
+        }
+        #p
+        {
+            left: 50px;
+        }
+        #n
+        {
+            left: 95%;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="image">
+        <img id="im" src="0.png" >
+        <button id="p" onclick="prev()">Previous</button>
+        <button id="n" onclick="nex()">Next</button>
+        
+    </div>
+    <script>
+      previous = document.getElementById(p);
+      next = document.getElementById(n);
+      i= document.getElementById(im);
+      console.log(i.src);
+      function prev()
+      {
+        if(i.src ="0.png")
+        {
+            i.src = '4.png';
+
+        }
+        // document.write("previous");
+      }
+      function nex()
+      {
+            if(i.src.match("4.png"))
+        {
+            i.src = "0.png";
+            
+        }
+        // document.write("next");
+      }
+    </script>
 </body>
 </html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        button 
+        {
+            position: absolute;
+            top:50%;
+            right: 5%;
+            background: transparent;
+            border:none;
+            font-size: 25px;
+            font-weight: bold;
+            color: #fff;
+            padding: 25px;
+            box-shadow: 0 0 10px #fff inset;
+            border-radius: 10px;
+
+        }
+
+        div 
+        {
+            position: relative;
+        }
+    </style>
+  </head>
+  <body>
+
+  <div>
+    <img id="i1" src="stone.png" alt="" height="400" width="100%" />
+
+    <button onclick="changeImage()">>></button>
+  </div>
+
+    <script>
+      img123 = document.getElementById("i1");
+
+      console.log(img123.src); //http://127.0.0.1:5500/stone.png
+
+      function changeImage() {
+        if (img123.src.match("0.png")) {
+          img123.src = "1.png";
+        }
+        else if(img123.src.match("1.png"))
+        {
+            img123.src = "2.png";
+        }
+
+        else if(img123.src.match("2.png"))
+        {
+            img123.src = "3.png";
+        }
+        
+        else {
+          img123.src = "0.png";
+        }
+
+        setTimeout("changeImage()",1000)
+      }
+
+      changeImage()
+    //   setInterval("changeImage()",1000)
+    </script>
+  </body>
+</html> -->

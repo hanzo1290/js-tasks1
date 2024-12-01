@@ -17,9 +17,11 @@
             padding: 10px;
             
         }
-        .navbar ul
+        .navbar ul li a
         {
-
+            text-decoration: none;
+            color: white;
+            position: relative;
         }
         .navbar ul li
         {
@@ -33,8 +35,8 @@
         }
         .menu li,.menu2 li
         {
-            display: block!important;
-            font-size: 15px!important;
+            display: block;
+            font-size: 15px;
 
         }
         .menu,.menu2
@@ -67,14 +69,35 @@
         {
             position: relative;
         }
+        .line
+        {
+            height: 7px;
+            width: 0%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: black;
+            border-radius: 50px;
+            transition: .72s;
+        }
+        .navbar li:hover .line
+        {
+            width: 100%;
+        }
+        
     </style>
 </head>
 <body>
     <div class="navbar">
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li class="men" id="click men">Men's ware
+            <li><a href="">Home</a>
+                <div class="line"></div>
+            </li>
+            <li><a href="">About</a>
+                <div class="line"></div>
+            </li>
+            <li class="men" id="click men"><a href="">Men's ware</a>
+                <div class="line"></div>
                 <div class="menu" id="box1">
                     <div class="image"><img src="watch.jpg" alt=""></div>
                     <ul>
@@ -99,7 +122,8 @@
                     </ul>
                 </div>
             </li>
-            <li class="women" id="click wo">Women's ware
+            <li class="women" id="click wo"><a href="">Women's ware</a>
+                <div class="line"></div>
                 <div class="menu2" id="box2">
                     
                     <ul>
@@ -125,10 +149,11 @@
                     <div class="image"><img src="watch.jpg" alt=""></div>
                 </div>
             </li>
-            <li class="box" id="codesshort">Short codes
+            <li class="box" id="codesshort"><a href="">Short codes</a>
+                <div class="line"></div>
                 <div class="mini" id="box3"><table border="2"><tr><td>web icon</td></tr><tr><td>typography</td></tr></table></div>
             </li>
-            <li>Contact</li>
+            <li><a href="">Contact</a><div class="line"></div></li>
         </ul>
     </div>
     <script>
