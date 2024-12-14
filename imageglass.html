@@ -20,6 +20,12 @@
         {
             width: 200px;
             height: 300px;
+            border: 3px solid black;
+            transition: .71s;
+        }
+        .card:hover
+        {
+            transform: translate(5%);
         }
         .card img
         {
@@ -30,28 +36,49 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-
-            <div class="card">
+        
+        <!-- <marquee direction="left"> -->
+            <div class="row">
+            <div class="card"  onclick="hov(0)" ondblclick="dbl(0)">
                 <img src="images/image1.png" alt="">
                 
             </div>
-            <div class="card">
+            <div class="card"  onclick="hov(1)" ondblclick="dbl(1)">
                 <img src="images/img2.png" alt="">
            
                 
             </div>
-            <div class="card">
+            <div class="card"  onclick="hov(2)" ondblclick="dbl(2)">
              <img src="images/img3.png" alt="">
             
                 
             </div>
-            <div class="card">
-                <img src="images/img4.png" alt="">
+            <div class="card"  onclick="hov(3)" ondblclick="dbl(3)">
+                <img src="images/img5.png" alt="">
                 
             </div>
             
         </div>
+    <!-- </marquee> -->
     </div>
+    <script>
+        
+       
+       function hov(card1 = document.getElementsByClassName('card'))
+       {
+            // card1.style.translateX="0 0";
+            // console.log("hi");
+            // card1.style.marginTop ="100"
+            card1.style.scale = "1.5";
+            // console.log(card1);
+       }
+       function dbl(card1 = document.getElementsByClassName('card'))
+       {
+        card1.style.transformOrigin = "0";
+        // card1.style.scale = "1";
+        // console.log(card1);
+        
+       }
+    </script>
 </body>
 </html>
