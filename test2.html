@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img 
+    {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+     }
+</style>
+<body>
+    <img src="images/bg.png" id="Image" alt="Pineapple" width="300" 
+    height="300">
+    
+    <form>
+    Photo Filter:
+      <input type="range" id="Filter" name="points" min="0" max="10" 
+    onclick="ChangeFilter()">
+    
+    </form>
+    Here is my JavaScript function to change the CSS image style:
+    
+    <script>
+    function ChangeFilter() {
+    Image = document.getElementById("Image").style.filter;
+    
+    Filter = document.getElementById("Filter").value;
+    if (Filter == 1) 
+    {Image = grayscale(10);
+
+    }
+    if (Filter == 2) {Image = grayscale(20);}
+    if (Filter == 3) {Image = grayscale(30);}
+    if (Filter == 4) {Image = grayscale(40);}
+    if (Filter == 5) {Image = grayscale(50);}
+    if (Filter == 6) {Image = grayscale(60);}
+    if (Filter == 7) {Image = grayscale(70);}
+    if (Filter == 8) {Image = grayscale(80);}
+    if (Filter == 9) {Image = grayscale(90);}
+    if (Filter == 10) {Image = grayscale(100);}
+    }
+    </script>
+    
+    </body>
+    </html>

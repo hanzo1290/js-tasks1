@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: indigo;
+        }
+        .container
+        {
+
+        }
+        .raw
+        {
+            display: flex;
+            gap: 40px;
+            justify-self: center;
+            margin-top: 200px;
+        }
+        .card
+        {
+            width: 200px;
+            height: 350px;
+            /* background-color: blueviolet; */
+            transition: .81s;
+        }
+        .card img
+        {
+            width: 100%;
+            height: 100%;
+        }
+        .card:hover
+        {
+            transform: scale(1.2);
+
+        }
+        .raw:hover  .card:not(:hover)
+        {
+            filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="images/bg.png" alt="" width="100%"> -->
+    <div class="container">
+        <div class="raw">
+            <div class="card">
+                <img src="images/wal.png" alt="">
+            </div>
+            <div class="card">
+                <img src="images/wal5.png" alt="">
+            </div>
+            <div class="card">
+                <img src="images/wal6.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

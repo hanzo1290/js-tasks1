@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Image Preview Example</title> 
+</head> 
+<body> 
+    <h1>Upload and Preview Image</h1> 
+    <form> 
+        <label for="imageUpload">Choose an image:</label> 
+        <input type="file" multiple id="imageUpload" name="imageUpload" accept="image/*" onchange="previewImage(event)"> 
+        <br><br> 
+        <img id="imagePreview" src="" alt="Image Preview" style="display:none; width:200px;"/> 
+    </form> 
+ 
+    <script> 
+        function previewImage(event) { 
+            const imagePreview = document.getElementById('imagePreview'); 
+            const file = event.target.files[0]; 
+            const reader = new FileReader(); 
+ 
+            reader.onload = function(){ 
+                imagePreview.src = reader.result; 
+                imagePreview.style.display = 'block'; 
+            } 
+ 
+            if (file) { 
+                reader.readAsDataURL(file); // Read the file as a data URL 
+            } 
+        } 
+    </script> 
+</body> 
+</html> 
