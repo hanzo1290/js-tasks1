@@ -27,11 +27,26 @@
             border: 3px solid black;
             transition: .71s;
         }
-        .card:hover
+        /* .card:hover
         {
             transform: translate(5%);
-        }
+        } */
         .card img
+        {
+            width: 100%;
+            height: 100%;
+        }
+        .hiden
+        {
+            height: 500px;
+            width: 400px;
+            background-color: white;
+            color: black;
+            position: absolute;
+            display: none;
+            border: 3px solid black;
+        }
+        .hiden img
         {
             width: 100%;
             height: 100%;
@@ -43,44 +58,55 @@
         
         <!-- <marquee direction="left"> -->
             <div class="row">
-            <div class="card"  onclick="hov(0)" ondblclick="dbl(0)">
+            <div class="card"  onclick="hov(this)" ondblclick="dbl(this)">
                 <img src="images/wal7.png" alt="">
                 
             </div>
-            <div class="card"  onclick="hov(1)" ondblclick="dbl(1)">
+            <div class="card"  onclick="hov(this)" ondblclick="dbl(this)">
                 <img src="images/img2.png" alt="">
            
                 
             </div>
-            <div class="card"  onclick="hov(2)" ondblclick="dbl(2)">
+            <div class="card"  onclick="hov(this)" ondblclick="dbl(this)">
              <img src="images/img3.png" alt="">
             
                 
             </div>
-            <div class="card"  onclick="hov(3)" ondblclick="dbl(3)">
+            <div class="card"  onclick="hov(this)" ondblclick="dbl(this)">
                 <img src="images/img5.png" alt="">
                 
+            </div>
+            <div class="hiden" id="show">
+                <img src="" alt="">
             </div>
             
         </div>
     <!-- </marquee> -->
     </div>
     <script>
-        
-       
-       function hov(card1 = document.getElementsByClassName('card'))
+        show = document.getElementById('show');
+   
+       function hov(card1)
        {
-            // card1.style.translateX="0 0";
-            // console.log("hi");
-            // card1.style.marginTop ="100"
-            card1.style.scale = "1.5";
-            // console.log(card1);
+           
+            // card1.style.scale = "1.5";
+            // 
+            sorce = card1.childNodes[1].src;
+        // console.log(sorce);
+            show.childNodes[1].src= sorce;
+            show.style.display="block"
+           
+            
+            
+
+            
        }
-       function dbl(card1 = document.getElementsByClassName('card'))
+       function dbl(card1)
        {
-        card1.style.transformOrigin = "0";
+       
         // card1.style.scale = "1";
-        // console.log(card1);
+        show.style.display="none"
+  
         
        }
     </script>

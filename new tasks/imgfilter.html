@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+
+        }
+        .raw
+        {
+            display: flex;
+            justify-content: center;
+        }
+        .image
+        {
+            width: 400px;
+            height: 500px;
+        }
+        .image img
+        {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="raw">
+            <div class="image">
+                <img src="images/knight.png" alt="" id="imagemain">
+                <!-- <input type="file" id="input1" //onchange="change()"//> -->
+                <br>
+                <label>brightness</label>
+                <input type="range" min="0" max="10" value="" onchange="bri(this)"><br>
+                <label>contrast</label>
+                <input type="range" min="0" max="10" value="" onchange="contra(this)"><br>
+                <label>saturation</label>
+                <input type="range" min="0" max="10" value="" onchange="satu(this)"><br>
+                <label>grayscale</label>
+                <input type="range" min="0" max="10" value="" onchange="gray(this)"><br>
+                <label>opacity</label>
+                <input type="range" min="0" max="10" value="" onchange="opa(this)"><br>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        img = document.getElementById('imagemain');
+        // img.style.filter = "grayscale(100%)";
+
+      function bri(x)
+      {
+       
+        y = x.value;
+        if(y==1){ img.style.filter ="brightness(10%)";}
+        if(y==2){ img.style.filter ="brightness(20%)";}
+        if(y==3){ img.style.filter ="brightness(30%)";}
+        if(y==4){ img.style.filter ="brightness(40%)";}
+        if(y==5){ img.style.filter ="brightness(50%)";}
+        if(y==6){ img.style.filter ="brightness(60%)";}
+        if(y==7){ img.style.filter ="brightness(70%)";}
+        if(y==8){ img.style.filter ="brightness(80%)";}
+        if(y==9){ img.style.filter ="brightness(90%)";}
+        if(y==10){ img.style.filter ="brightness(100%)";}
+      }
+      
+      function contra(x)
+      {
+       
+        y = x.value;
+        if(y==1){ img.style.filter ="contrast(10%)";}
+        if(y==2){ img.style.filter ="contrast(20%)";}
+        if(y==3){ img.style.filter ="contrast(30%)";}
+        if(y==4){ img.style.filter ="contrast(40%)";}
+        if(y==5){ img.style.filter ="contrast(50%)";}
+        if(y==6){ img.style.filter ="contrast(60%)";}
+        if(y==7){ img.style.filter ="contrast(70%)";}
+        if(y==8){ img.style.filter ="contrast(80%)";}
+        if(y==9){ img.style.filter ="contrast(90%)";}
+        if(y==10){ img.style.filter ="contrast(100%)";}
+      }
+      function satu(x)
+      {
+       
+        y = x.value;
+        if(y==1){ img.style.filter ="saturate(10%)";}
+        if(y==2){ img.style.filter ="saturate(20%)";}
+        if(y==3){ img.style.filter ="saturate(30%)";}
+        if(y==4){ img.style.filter ="saturate(40%)";}
+        if(y==5){ img.style.filter ="saturate(50%)";}
+        if(y==6){ img.style.filter ="saturate(60%)";}
+        if(y==7){ img.style.filter ="saturate(70%)";}
+        if(y==8){ img.style.filter ="saturate(80%)";}
+        if(y==9){ img.style.filter ="saturate(90%)";}
+        if(y==10){ img.style.filter ="saturate(100%)";}
+      }
+      function gray(x)
+      {
+       
+        y = x.value;
+        if(y==1){ img.style.filter ="grayscale(10%)";}
+        if(y==2){ img.style.filter ="grayscale(20%)";}
+        if(y==3){ img.style.filter ="grayscale(30%)";}
+        if(y==4){ img.style.filter ="grayscale(40%)";}
+        if(y==5){ img.style.filter ="grayscale(50%)";}
+        if(y==6){ img.style.filter ="grayscale(60%)";}
+        if(y==7){ img.style.filter ="grayscale(70%)";}
+        if(y==8){ img.style.filter ="grayscale(80%)";}
+        if(y==9){ img.style.filter ="grayscale(90%)";}
+        if(y==10){ img.style.filter ="grayscale(100%)";}
+      }
+      function opa(x)
+      {
+       
+        y = x.value;
+        if(y==1){ img.style.filter ="opacity(10%)";}
+        if(y==2){ img.style.filter ="opacity(20%)";}
+        if(y==3){ img.style.filter ="opacity(30%)";}
+        if(y==4){ img.style.filter ="opacity(40%)";}
+        if(y==5){ img.style.filter ="opacity(50%)";}
+        if(y==6){ img.style.filter ="opacity(60%)";}
+        if(y==7){ img.style.filter ="opacity(70%)";}
+        if(y==8){ img.style.filter ="opacity(80%)";}
+        if(y==9){ img.style.filter ="opacity(90%)";}
+        if(y==10){ img.style.filter ="opacity(100%)";}
+      }
+      
+
+
+    </script>
+</body>
+</html>
